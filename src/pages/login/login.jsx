@@ -3,7 +3,7 @@ import { Form, Input, Button, Icon, message } from "antd";
 import { Redirect } from "react-router-dom";
 
 import "./login.less";
-// import logo from '../../assets/images/logo.png'
+import logo from "../../assert/images/logo.png"
 import { reqLogin } from "../../api";
 import memoryUtils from "../../utils/memoryUtils";
 import storageUtils from "../../utils/storageUtils";
@@ -65,7 +65,7 @@ class Login extends Component {
     return (
       <div className="login">
         <header className="login-header">
-          {/* <img src={logo} alt=""></img> */}
+          <img src={logo} alt=""></img>
         </header>
         <section className="login-content">
           <h2>登入</h2>

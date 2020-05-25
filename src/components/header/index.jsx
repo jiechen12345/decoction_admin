@@ -7,11 +7,7 @@ import './index.less'
  */
 export default class Header extends Component {
   render() {
-
-    
     const username = memoryUtils.user.username
-
-  
     return (
       <div className="header">
         <div className="header-top">
