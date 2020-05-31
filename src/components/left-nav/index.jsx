@@ -2,8 +2,7 @@ import React, { Component } from "react";
 
 import { Link, withRouter } from "react-router-dom";
 import "./index.less";
-import memoryUtils from "../../utils/memoryUtils";
-import { Menu, Button, Icon } from "antd";
+import { Menu,  Icon } from "antd";
 import logo from "../../assert/images/logo.png";
 import menuList from "../../config/menuConfig";
 
@@ -48,6 +47,7 @@ class LeftNav extends Component {
   /*
   componentWillMount '第一次'執行render前
   通常為render準備資料，而且通常不會利用其執行非同步的程式，因為等到跑完了render也結束了
+  componentDidMount ->通常是用在讀取 頁面init資料 ajax setinterval等非同步
    */
   componentWillMount() {
     this.menuNodes = this.getMenuNodes(menuList);

@@ -1,4 +1,9 @@
 import React, {PureComponent} from 'react'
+import {
+  Card,
+  Table,
+  Button
+}
 import PropTypes from 'prop-types'
 import {
   Form,
@@ -9,13 +14,11 @@ import {
 const Item = Form.Item
 const Option = Select.Option
 
-/*
-添加/修改用户的form组件
- */
+
 class UserForm extends PureComponent {
 
   static propTypes = {
-    setForm: PropTypes.func.isRequired, // 用来传递form对象的函数
+    setForm: PropTypes.func.isRequired, 
     roles: PropTypes.array.isRequired,
     user: PropTypes.object
   }
@@ -28,10 +31,9 @@ class UserForm extends PureComponent {
 
     const {roles, user} = this.props
     const { getFieldDecorator } = this.props.form
-    // 指定Item布局的配置对象
     const formItemLayout = {
-      labelCol: { span: 4 },  // 左侧label的宽度
-      wrapperCol: { span: 15 }, // 右侧包裹的宽度
+      labelCol: { span: 4 }, 
+      wrapperCol: { span: 15 }, 
     }
 
     return (
